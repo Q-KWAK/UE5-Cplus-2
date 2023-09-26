@@ -1,6 +1,2 @@
 ﻿  MAIN.cpp
-D:\kmg\3week\WORKS\UE5-Cplus-2\4_ARRAY\MAIN.cpp(45,10): warning C4476: 'printf' : 서식 지정자에 알 수 없는 형식 필드 문자 ')'이(가) 있습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\4_ARRAY\MAIN.cpp(77,49): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\4_ARRAY\MAIN.cpp(77,43): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\4_ARRAY\MAIN.cpp(77,11): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
   4_ARRAY.vcxproj -> D:\kmg\3week\WORKS\UE5-Cplus-2\4_ARRAY\x64\Debug\4_ARRAY.exe
