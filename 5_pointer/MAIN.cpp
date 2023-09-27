@@ -50,9 +50,32 @@ struct stphoneshop
 	
 	pPs->iphoneCnt--; // 포인트로 참조하는 구조체에 변수는 '->' 키워드로 참조한다.
 }
-		
+	// number 받아서 호출한다.	
+	void printnum(int* number)
+	{
+		printf("print number=%d\n", *number);
+	}
+
+	void printnum2(const int& number)
+	{
+		// number = nullptr;
+		//*number = 2;
+		// number = 4;
+		printf("print number=%d\n", number);
+	}
+
+	void printphoneshop(const stphoneshop* ps)
+	{
+		printf("print iphoneCnt=%d\n", ps -> iphoneCnt);
+
+	}
 
 
+	void printphoneshop(const stphoneshop& ps)
+	{
+		printf("print iphoneCnt=%d\n", ps.iphoneCnt);
+
+	}
 
 
 
@@ -147,12 +170,31 @@ int main()
 
 	// 정렬된 배열 출력
 	printf("정답: ");
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 10; i++) 
+	{
 		printf("%d ", arr[i]);
 	}
-	printf("\n");
+	
+	//const 상수화
+	// 실수를 줄일 수 있어, 디버깅 횟수를 줄일 수 있따. (디버깅 : 버그를 찾거나 수정하는 행위)
+	const int cint = 100;//상수
 
-	return 0;
+	int value = 0;
+	int value2 = 0;
+	int* pvalue = &value;
+
+	//const int* pvalue = &value; // 포인터가 가르키는 내용 수정 불가, 포인터 값 수정 가능, 참조 가능
+	//int const* pvalue = &value; // 포인터가 가르키는 내용 수정 불가, 포인터 값 수정 가능. 참조 가능
+	//int* const pvalue = &value; // 포인터가 가르키는 내용 수정 가능, 포인터 값 수정 불가, 참조 가능
+	//	int const* const pvalue = &value; // 포인터가 가르키는 내용 수정 불가, 포인터 값 수정 불가, 참조 가능
+	*pvalue = 2;
+	pvalue = &value2;
+	printf("pvalue=%d\n", *pvalue);
+	
+	printnum(&value);
+	printnum2(value);
+
+
 }
 	
 
