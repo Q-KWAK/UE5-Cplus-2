@@ -4,6 +4,7 @@
 
 
 
+
 //for (/*초기설정*/ int i = 0;/*반복조건체크*/ i < 10; /*반복 후 처리*/++i)
 	//	{// 반복 처리 할 코드 시작
 
@@ -77,7 +78,17 @@ int main()
 	
 	//Q3 abcdef를 역으로 출력하기 
 		wchar_t swichinput[20] = L"abcdef";
-		
+		int size = wcslen(swichinput);
+		printf("size=%d\n", size);
+		for (int i = 1; i <= size; ++i)
+		{
+			printf("%c\n", swichinput[size - i]);
+		}
+		for (int i = size; i >= 0; --i)
+		{
+			printf("%c\n", swichinput[i - 1]);
+		}
+
 		//wchar_t 형으로  문자 입력 받기
 		//wchar_t 변수형을
 		//[20]의 크기로 생성하고
@@ -93,9 +104,19 @@ int main()
 		//wprintf는 출력을 하는 기능 사용하겠다.
 		//L"swichinput=%s" 문자 형태로 출력하겠다.
 		//%s위치에 swichinput 값을 출력하겠다.
-		wprintf(L"swichinput=%s", swichinput);
+		wprintf(L"swichinput=%s\n", swichinput);
 
 	//Q4
 	//입력 받은 문자열에서 'a'문자 갯수 출력
-
+		int size = wcslen(swichinput);
+		int cnt = 0;
+		for (int i = 0; i < size; ++i)
+		{
+			int size = wcslen(swichinput);
+			if (swichinput[i] == 'a')
+			{
+				cnt++;
+			}
+			printf("cnt=%d \n", cnt);
+		}
 }

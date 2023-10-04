@@ -1,2 +1,13 @@
 ﻿  Main.cpp
-  test 1.vcxproj -> D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\x64\Debug\test 1.exe
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(81,12): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(96,11): error C2374: 'swichinput': 재정의. 여러 번 초기화했습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(80,11): message : 'swichinput' 선언을 참조하십시오.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): warning C4477: 'wscanf_s' : 서식 문자열 '%S'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'wchar_t *'입니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): message : 이 인수는 변환 지정자에서 사용됩니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): message : 서식 문자열에서 '%lS'을(를) 사용하는 것이 좋습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): message : 서식 문자열에서 '%llS'을(를) 사용하는 것이 좋습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): message : 서식 문자열에서 '%LS'을(를) 사용하는 것이 좋습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(102,12): message : 서식 문자열에서 '%wS'을(를) 사용하는 것이 좋습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(111,7): error C2374: 'size': 재정의. 여러 번 초기화했습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(81,7): message : 'size' 선언을 참조하십시오.
+D:\kmg\3week\WORKS\UE5-Cplus-2\test 1\Main.cpp(115,13): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
