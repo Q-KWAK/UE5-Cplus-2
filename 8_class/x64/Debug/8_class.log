@@ -1,24 +1,24 @@
 ﻿  main_class.cpp
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(79,17): error C2535: 'const CMyClass &CMyClass::operator =(const CMyClass &)': 멤버 함수를 이미 정의했거나 선언했습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(70,17): message : 'CMyClass::operator =' 선언을 참조하십시오.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(104,38): warning C4311: '<function-style-cast>': 'int **'에서 'int'(으)로 포인터가 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(104,38): warning C4302: '<function-style-cast>': 'int **'에서 'int'(으)로 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(104,52): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(104,52): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(109,40): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(109,40): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(109,56): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(109,56): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(124,11): error C2512: 'CMyClass': 사용할 수 있는 적절한 기본 생성자가 없습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(11,7): message : 'CMyClass' 선언을 참조하십시오.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(124,15): error C2143: 구문 오류: ';'이(가) ':' 앞에 없습니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(124,15): error C2059: 구문 오류: ':'
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(128,13): error C2676: 이항 '+': 'CMyClass'이(가) 이 연산자를 정의하지 않거나 미리 정의된 연산자에 허용되는 형식으로의 변환을 정의하지 않습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(12,1): error C2011: 'CMyClass': 'class' 형식 재정의
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.h(3,7): message : 'CMyClass' 선언을 참조하십시오.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(108,38): warning C4311: '<function-style-cast>': 'int **'에서 'int'(으)로 포인터가 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(108,38): warning C4302: '<function-style-cast>': 'int **'에서 'int'(으)로 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(108,52): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(108,52): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(113,40): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(113,40): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(113,56): warning C4311: '<function-style-cast>': 'int *'에서 'int'(으)로 포인터가 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(113,56): warning C4302: '<function-style-cast>': 'int *'에서 'int'(으)로 잘립니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(119,11): error C2079: 'cmy'은(는) 정의되지 않은 class 'CMyClass'을(를) 사용합니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(120,11): error C2079: 'cmy2'은(는) 정의되지 않은 class 'CMyClass'을(를) 사용합니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(120,15): error C2440: '초기화 중': 'initializer list'에서 'int'(으)로 변환할 수 없습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(120,15): message : 이니셜라이저에 요소가 너무 많습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(126,11): error C2079: 'aa'은(는) 정의되지 않은 class 'CMyClass'을(를) 사용합니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(129,11): error C2079: 'cmy3'은(는) 정의되지 않은 class 'CMyClass'을(를) 사용합니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(129,15): error C2143: 구문 오류: ';'이(가) ':' 앞에 없습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\main_class.cpp(129,15): error C2059: 구문 오류: ':'
   myclass.cpp
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.cpp(17,17): error C2039: 'printb': 'CMyClass2'의 멤버가 아닙니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.h(3,7): message : 'CMyClass2' 선언을 참조하십시오.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.cpp(19,17): error C2065: 'm_b': 선언되지 않은 식별자입니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.cpp(22,17): error C2039: 'setc': 'CMyClass2'의 멤버가 아닙니다.
-D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.h(3,7): message : 'CMyClass2' 선언을 참조하십시오.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.cpp(22,16): error C2039: 'setc': 'CMyClass'의 멤버가 아닙니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.h(3,7): message : 'CMyClass' 선언을 참조하십시오.
 D:\kmg\3week\WORKS\UE5-Cplus-2\8_class\myclass.cpp(24,2): error C2065: 'c': 선언되지 않은 식별자입니다.
   코드를 생성하고 있습니다...

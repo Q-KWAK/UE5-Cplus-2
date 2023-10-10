@@ -28,7 +28,7 @@ CMyClass(int valueA) : a(valueA), m_b(0), c(0)
 {
 	printf("생성자A호출\n");
 }
-//파과자
+//파괴자
 //클래스가 파괴될 때 호출되는 함수
 //선언 하지 않아도 기본 파괴자 존재
 //파괴자도 public이 아니면 호출이 불가능,반드시 public으로 선언
@@ -123,7 +123,7 @@ int main()
 	cmy.setc(10);//특정 변수를 수정하기 위한 함수를 생성해서 개발하는게 기본규칙
 	//cmy.setc(100);//만약 변수를 private로 되어있다면 개발자가 직접 접근하지 말라는 의도가 있다
 	
-	CMyClass2 aa;
+	CMyClass aa;
 
 
 	CMyClass cmy3:
