@@ -7,12 +7,12 @@
 
 using namespace std; // string 앞에 std :: 안붙혀도 됨
 
-struct sttest
+struct sttest // 구조체 sttest를 만들겠다.
 {
 	string m_name = ""; // string이라는 m_name에 "" 넣는다. 문자를 넣을 땐 큰 따옴표
-	int m_math = 0;
-	int m_eng = 0;
-	int m_lang = 0;
+	int m_math = 0; // 변수를 선언한다. 
+	int m_eng = 0;  // 변수를 선언한다. 
+	int m_lang = 0; // 변수를 선언한다. 
 
 	sttest(string name, int math, int eng, int lang):
 	m_name(name), m_math(math), m_eng(eng), m_lang(lang) {}
@@ -24,6 +24,9 @@ struct sttest
 
 };
 
+//함수이름 : pustStTest
+//파라미터(입력받을 변수) : vector(배열을)<sttest>&(구조체를 참조 전달한다) vecTest(로), string& str(str의 문자열 값을 참조하여) // 
+//반환값(리턴값) : 없음(void는 없다.)
 void pustStTest(vector<sttest>& vecTest, string& str)
 {
 	stringstream ssTEST(str);//string 문자열을 stringstream 변수형태로 만든다
