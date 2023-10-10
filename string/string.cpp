@@ -83,6 +83,7 @@ int main()
 	}
 
 
-
-
+	// 스트링에서 특정 문자 제거
+	testStr.erase(remove(testStr.begin(), testStr.end(), ','), testStr.end());
+	printf("testStr=%s\n", testStr.c_str());
 }
