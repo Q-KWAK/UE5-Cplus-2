@@ -14,7 +14,7 @@ struct sttest // 구조체 sttest를 만들겠다.
 	int m_eng = 0;  // 변수를 선언한다. 
 	int m_lang = 0; // 변수를 선언한다. 
 
-	sttest(string name, int math, int eng, int lang):
+	sttest(string name = "", int math = 0, int eng = 0, int lang = 0) : // 문자는 "" 안에 쓴다.
 	m_name(name), m_math(math), m_eng(eng), m_lang(lang) {}
 
 	void printTest()
@@ -22,25 +22,65 @@ struct sttest // 구조체 sttest를 만들겠다.
 		printf("name=%s, math=%d, eng=%d, lang=%d\n", m_name.c_str(), m_math, m_eng, m_lang);
 	}
 
+	void SetData(string& str)
+	{
+		stringstream ssTest(str);// string문자열을  stringstream 변수형태로 만든다.
+		string line;// 읽어온 string 담아둘 변수
+
+		// ssTest을 왼쪽 부터 ','를 기준으로 문자를 읽어서 line에 넣는다.
+		// getline 결과가 false(더이상 읽을 문자열이 없다)면 종료
+		while (getline(ssTest, line, ','))
+		{
+			line.erase(remove(line.begin(), line.end(), ' '), line.end());
+
+			int index = line.find('=');
+			string leftStr = line.substr(0, index);
+			string rightStr = line.substr(index + 1, line.length() - index);
+
+			if (leftStr == "name")
+			{
+				m_name = rightStr;
+			}
+			else if (leftStr == "math")
+			{
+				m_math = stoi(rightStr);
+			}
+			else if (leftStr == "eng")
+			{
+				m_eng = stoi(rightStr);
+			}
+			else if (leftStr == "lang")
+			{
+				m_lang = stoi(rightStr);
+			}
+		}
+	}
 };
+
+
 
 //함수이름 : pustStTest
 //파라미터(입력받을 변수) : vector(배열을)<sttest>&(구조체를 참조 전달한다) vecTest(로), string& str(str의 문자열 값을 참조하여) // 
 //반환값(리턴값) : 없음(void는 없다.)
-void pustStTest(vector<sttest>& vecTest, string& str)
-{
-	stringstream ssTEST(str);//string 문자열을 stringstream 변수형태로 만든다
-	string line; // 읽어온 string을 담아둘 변수
-	
-	//ssTest를 왼쪽 부터','를 기준으로 문자를 읽어서 line에 넣는다. 
-	//getline 결과가 false(더이상 읽을 문자열이 없다)면 종료
-	while (getline(ssTEST, line, ','))
-	{
-		line.erase(remove(line.begin(), line.end(), ' '), line.end());
-		printf("line[% s]\n", line.c_str());
-	}
+//void pustStTest(vector<sttest>& vecTest, string& str)
+//{
+//	stringstream ssTEST(str);//string 문자열을 stringstream 변수형태로 만든다
+//	string line; // 읽어온 string을 담아둘 변수
+//	
+//	//ssTest를 왼쪽 부터','를 기준으로 문자를 읽어서 line에 넣는다. 
+//	//getline 결과가 false(더이상 읽을 문자열이 없다)면 종료
+//	while (getline(ssTEST, line, ','))
+//	{
+//		line.erase(remove(line.begin(), line.end(), ' '), line.end());
+//		printf("line[% s]\n", line.c_str());
+//	}
+//
+//}
 
-}
+
+
+
+
 
 int main()
 {	//파일 쓰기
@@ -76,11 +116,15 @@ int main()
 		while (!readFile.eof()) // !readFile(변수공간 내에).eof(정보가 끝나지 않는 동안) while(괄호 안을 반복한다.)
 		{
 
-			string str; //string{문자열 형태의 공간(변수)} str을 선언한다.
-			getline(readFile, str);// readFile에 텍스트를 한줄 읽어서 str에 넣는다. 
+			std::string str; //string{문자열 형태의 공간(변수)} str을 선언한다.
+			std ::getline(readFile, str);// readFile에 텍스트를 한줄 읽어서 str에 넣는다. 
 			printf("str=%s\n", str.c_str()); //printf(출력한다) "str=%s\n"(str = %s의 값을 띄어쓰기), str.c_str(str의 값을 문자열로 변환해서) 
 			
-			pustStTest(vecTest, str);
+			sttest newData;
+			newData.SetData(str);
+			vecTest.push_back(newData);	
+			
+			//pustStTest(vecTest, str);
 		}
 		readFile.close(); //readFile(변수 readfile을).close() 끝낸다.
 	}

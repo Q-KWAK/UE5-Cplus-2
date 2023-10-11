@@ -1,0 +1,9 @@
+﻿  highlowgame.cpp
+D:\kmg\3week\WORKS\UE5-Cplus-2\highlowgame\highlowgame.cpp(28,28): warning C4244: '인수': 'double'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\highlowgame\highlowgame.cpp(31,58): warning C4267: '인수': 'size_t'에서 '_Ty'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+D:\kmg\3week\WORKS\UE5-Cplus-2\highlowgame\highlowgame.cpp(125,22): warning C4805: '==': 연산에 'bool' 형식과 'int' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  highlowgame.vcxproj -> D:\kmg\3week\WORKS\UE5-Cplus-2\highlowgame\x64\Debug\highlowgame.exe

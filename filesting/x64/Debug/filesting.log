@@ -1,2 +1,4 @@
 ﻿  filestring.cpp
-  filesting.vcxproj -> D:\kmg\3week\WORKS\UE5-Cplus-2\filesting\x64\Debug\filesting.exe
+D:\kmg\3week\WORKS\UE5-Cplus-2\filesting\filestring.cpp(36,14): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\filesting\filestring.cpp(123,11): error C2512: 'sttest': 사용할 수 있는 적절한 기본 생성자가 없습니다.
+D:\kmg\3week\WORKS\UE5-Cplus-2\filesting\filestring.cpp(10,8): message : 'sttest' 선언을 참조하십시오.
