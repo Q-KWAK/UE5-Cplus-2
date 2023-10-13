@@ -40,4 +40,5 @@ public:
 
 	float LocX;
 	bool IsMoveRight;
+	bool IsPlay;
 };

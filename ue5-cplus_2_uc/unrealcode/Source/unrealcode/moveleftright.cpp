@@ -4,7 +4,7 @@
 #include "moveleftright.h"
 
 // Sets default values
-Amoveleftright::Amoveleftright() : LocX(0),IsMoveRight (true)
+Amoveleftright::Amoveleftright() : LocX(0),IsMoveRight (true), IsPlay(false)
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -39,6 +39,8 @@ Amoveleftright::Amoveleftright() : LocX(0),IsMoveRight (true)
 	//{
 	//	StaticMesh->SetStaticMesh(sm.Object); // StaticMeshComponent에 StaticMesh 적용
 	//}
+	
+
 
 }
 Amoveleftright::~Amoveleftright()
@@ -67,6 +69,9 @@ void Amoveleftright::Tick(float DeltaTime)
 	////SetRelativeLocation : 상대적인 위치값을 설정한다
 	////FVector : 언리얼에서 사용하는 3차원 좌표 변수
 	//StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
+	if (IsPlay == false)
+		return;
+	
 	if (IsMoveRight)
 	{
 		LocX += 1;
