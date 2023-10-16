@@ -4,7 +4,7 @@
 #include "moveleftright.h"
 
 // Sets default values
-Amoveleftright::Amoveleftright() : LocX(0),IsMoveRight (true), IsPlay(false)
+Amoveleftright::Amoveleftright() : m_LocX(0),m_IsMoveRight (true), m_IsPlay(false)
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -69,27 +69,32 @@ void Amoveleftright::Tick(float DeltaTime)
 	////SetRelativeLocation : 상대적인 위치값을 설정한다
 	////FVector : 언리얼에서 사용하는 3차원 좌표 변수
 	//StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
-	if (IsPlay == false)
+	if (m_IsPlay == false)
 		return;
 	
-	if (IsMoveRight)
+	if (m_IsMoveRight)
 	{
-		LocX += 1;
-		StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
-		if (LocX >= 200)
+		m_LocX += 1;
+		StaticMesh->SetRelativeLocation(FVector(m_LocX, 0, 0));
+		if (m_LocX >= 200)
 		{
-			IsMoveRight = false;
+			m_IsMoveRight = false;
 		}
 	}
 	else
 	{
-		LocX -= 1;
-		StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
-		if (LocX <= -200)
+		m_LocX -= 1;
+		StaticMesh->SetRelativeLocation(FVector(m_LocX, 0, 0));
+		if (m_LocX <= -200)
 		{
-			IsMoveRight = true;
+			m_IsMoveRight = true;
 		}
 	}
 
+}
+
+void Amoveleftright::Code_Doplay_Implementation(bool IsPlay)
+{
+	m_IsPlay = IsPlay;
 }
 
