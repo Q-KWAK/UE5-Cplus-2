@@ -33,6 +33,12 @@ public:
 	// called every frame
 	virtual void Tick(float deltatime) override;
 
+	//바인드 거는 함수는 무조건 유펑션
+	UFUNCTION()
+	void EventOverlap(bool IsBegin);
+
+
+
 public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -51,4 +57,10 @@ public:
 	float m_LocX;
 	bool m_IsMoveRight;
 	bool m_IsPlay;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TObjectPtr<class ACORE_SWITCH> m_swich;
+
+
 };

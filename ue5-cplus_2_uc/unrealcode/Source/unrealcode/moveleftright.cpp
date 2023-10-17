@@ -2,6 +2,7 @@
 
 
 #include "moveleftright.h"
+#include "CORE_SWITCH.h"
 
 // Sets default values
 Amoveleftright::Amoveleftright() : m_LocX(0),m_IsMoveRight (true), m_IsPlay(false)
@@ -53,6 +54,8 @@ Amoveleftright::~Amoveleftright()
 void Amoveleftright::BeginPlay()
 {
 	Super::BeginPlay();
+	if (IsValid(m_swich))
+		m_swich->FDle_EventOverlap.AddDynamic(this,&Amoveleftright ::EventOverlap);
 	
 }
 
@@ -91,6 +94,11 @@ void Amoveleftright::Tick(float DeltaTime)
 		}
 	}
 
+}
+
+void Amoveleftright::EventOverlap(bool IsBegin)
+{
+	m_IsPlay = IsBegin;
 }
 
 void Amoveleftright::Code_Doplay_Implementation(bool IsPlay)
